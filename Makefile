@@ -11,7 +11,7 @@ format:
 	python -m black *.py
 
 lint:
-	python -m pylint *.py
+	python -m pylint --disable=C *.py
 
 test:
 	python -m pytest --cov=hello
