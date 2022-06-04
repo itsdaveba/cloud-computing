@@ -12,6 +12,6 @@ lint:
 	python -m pylint --disable=C *.py
 
 test:
-	python -m pytest --cov=hello
+	python -m pytest --cov=main
 
-all: install lint test
+all: install lint test format
