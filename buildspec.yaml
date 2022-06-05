@@ -13,6 +13,8 @@ phases:
       - make install
       - make lint
       - make test
-  post_build:
-    commands:
-      - make deploy
+artifacts:
+  files:
+    - .ebextensions/options.config
+    - main.py
+    - requirements.txt
