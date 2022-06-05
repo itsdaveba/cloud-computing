@@ -1,0 +1,18 @@
+# AWS CodeBuild
+
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.x
+  build:
+    commands:
+      - python3 -m venv ~/.venv
+      - source ~/.venv/bin/activate
+      - make install
+      - make lint
+      - make test
+  post_build:
+    commands:
+      - make deploy
