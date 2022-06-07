@@ -8,11 +8,10 @@ phases:
       python: 3.x
   build:
     commands:
-      - python3 -m venv ~/.venv
-      - source ~/.venv/bin/activate
       - make install
       - make lint
       - make test
+      - make format
 artifacts:
   files:
     - .ebextensions/options.config
