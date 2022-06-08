@@ -7,7 +7,7 @@ phases:
     runtime-versions:
       python: 3.x
     commands:
-      - make dockerlogin
+      - echo ${DOCKERHUB_PASSWORD} | docker login -u ${DOCKERHUB_USERNAME} --password-stdin
   build:
     commands:
       - make install

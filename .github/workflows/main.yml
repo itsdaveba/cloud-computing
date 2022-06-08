@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.10'
       - name: Docker login
-        run: make dockerlogin
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - name: Install requirements
         run: make install
       - name: Lint with Pylint
