@@ -5,6 +5,7 @@ jobs:
     machine: true
     steps:
       - checkout
+      - run: python3 --version
       - run:
           name: Docker login
           command: echo ${DOCKERHUB_PASSWORD} | docker login -u ${DOCKERHUB_USERNAME} --password-stdin
