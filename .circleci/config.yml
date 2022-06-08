@@ -6,6 +6,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Docker login
+          command: |
+            echo ${DOCKERHUB_PASSWORD} | docker login -u ${DOCKERHUB_USERNAME} --password-stdin
+      - run:
           name: Install requirements
           command: make install
       - run:
