@@ -22,7 +22,7 @@ jobs:
           command: make format
 
 workflows:
-  build:
+  build_workflow:
     jobs:
       - build:
           type: approval
