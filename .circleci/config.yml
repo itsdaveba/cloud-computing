@@ -2,11 +2,7 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: cimg/python:3.9
-        auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
+    machine: true
     steps:
       - checkout
       - run:
