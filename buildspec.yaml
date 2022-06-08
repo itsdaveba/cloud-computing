@@ -6,6 +6,8 @@ phases:
   install:
     runtime-versions:
       python: 3.x
+    commands:
+      - make dockerlogin
   build:
     commands:
       - make install

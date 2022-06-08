@@ -30,3 +30,6 @@ clean:
 	rm -rf ${VENV}
 	rm -rf __pycache__
 	rm -rf .pytest_cache
+
+dockerlogin:
+	echo "${DOCKERHUB_PASSWORD}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
