@@ -26,4 +26,5 @@ workflows:
     jobs:
       - Hold-for-Approval:
           type: approval
-      - build
+      - build:
+          requires: Hold-for-Approval
