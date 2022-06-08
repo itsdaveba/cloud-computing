@@ -7,14 +7,14 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install requirements
-        command: make install
+          name: Install requirements
+          command: make install
       - run:
-        name: Lint with Pylint and Hadolint
-        command: make lint
+          name: Lint with Pylint and Hadolint
+          command: make lint
       - run:
-        name: Test with Pytest
-        command: make test
+          name: Test with Pytest
+          command: make test
       - run:
-        name: Format with Black
-        command: make format
+          name: Format with Black
+          command: make format
