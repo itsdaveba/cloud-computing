@@ -21,7 +21,7 @@ jobs:
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login --username ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - name: Install requirements
         run: make install
-      - name: Lint with Pylint
+      - name: Lint with Pylint and Hadolint
         run: make lint
       - name: Test with Pytest
         run: make test
