@@ -24,5 +24,6 @@ jobs:
 workflows:
   build_workflow:
     jobs:
-      - build:
+      - Hold-for-Approval:
           type: approval
+      - build
