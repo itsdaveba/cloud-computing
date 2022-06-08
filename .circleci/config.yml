@@ -6,4 +6,15 @@ jobs:
       - image: cimg/python:3.9
     steps:
       - checkout
-      - run: ls -a
+      - run:
+        name: Install requirements
+        command: make install
+      - run:
+        name: Lint with Pylint and Hadolint
+        command: make lint
+      - run:
+        name: Test with Pytest
+        command: make test
+      - run:
+        name: Format with Black
+        command: make format
